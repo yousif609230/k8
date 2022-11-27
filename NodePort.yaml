@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service #we choose service
+metadata:
+  name: my-service
+spec:
+  type: NodePort #we choose Nodeport service
+  ports:
+    - targetPort: 80 #the port on the pod
+      port: 80 #the port in service map with pod port
+      nodePort: 30008 #port that external user will access to
+  selector: # we take the pod label to identify that this service connect the specific pods
+    env: prod

@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myenv
+data:
+  USER: yusuf
+  ACCESS_KEY: any@secret
