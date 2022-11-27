@@ -10,9 +10,9 @@ spec:
   containers:
     - name: nginx
       image: nginx
-      envFrom:
-        - configMapRef:
-            name: myenv
+      # envFrom:
+      #   - configMapRef:
+      #       name: myenv
   # affinity: #this is same as nodeSelector but its more advanced
   #   nodeAffinity:
   #     requiredDuringSchedulingIgnoredDuringExecution:
