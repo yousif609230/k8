@@ -10,6 +10,11 @@ spec:
   containers:
     - name: nginx
       image: nginx
+  # volumes: #to mount the pod with external volume
+  #   - name: data-volume
+  #     awsElasticBlockStore:
+  #       volumeID: <volume-id>
+  #       fsType: ext4
       # envFrom:
       #   - configMapRef:
       #       name: myenv

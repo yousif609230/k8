@@ -1,0 +1,13 @@
+#to create volume for future mapping , we can use many type of storage like aws ebs , s3 , local 
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  name: pv-vol1
+spec:
+  capacity:
+    storage: 1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
+  hostPath:
+    path: /tmp/data
