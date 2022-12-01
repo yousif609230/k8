@@ -1,4 +1,5 @@
 #to create volume for future mapping , we can use many type of storage like aws ebs , s3 , local 
+#when we create presistence volume , then we need to create presistence volume claim to map the volume with the pod
 apiVersion: v1
 kind: PersistentVolume
 metadata:
