@@ -9,7 +9,7 @@ spec:
   selector:
     matchLabels:
       env: prod
-  replicas: 7
+  replicas: 6
   template:
     metadata:
       name: nginx-2
