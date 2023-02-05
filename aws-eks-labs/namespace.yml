@@ -2,3 +2,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: dev
+
+  # for all other resources when we want to add them into specific namespace we need to add :
+  # metadata:
+  #  namespece: dev
