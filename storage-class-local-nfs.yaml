@@ -1,0 +1,15 @@
+#this file shows how to install storage class for nfs storage (synology)
+
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: nfs-csi
+provisioner: nfs.csi.k8s.io
+parameters:
+  server: 192.168.3.22 #nfs server ip
+  share: /volume1/Labs/kubernetes_storage #nfs path
+reclaimPolicy: Retain # Use "Retain" if you don't want automatic storage deletion
+volumeBindingMode: Immediate
+mountOptions:
+  - hard
+  - nfsvers=3
